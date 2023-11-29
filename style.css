@@ -2,6 +2,7 @@
 
 body {
   font-family: "Lato", sans-serif;
+  
 }
 
 h2 {
@@ -23,6 +24,8 @@ p {
 
 section {
   padding: 20px;
+  flex-direction: column;
+  display: flex;
 }
 
 section.alternate-background {
@@ -31,7 +34,8 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 /* ---  Groups & Items --- */
@@ -116,4 +120,91 @@ footer p {
   padding: 20px;
 }
 
+#search-form {
+  text-align: center;
+}
+
+#search-form label {
+  margin-right: 20px;
+}
+
+#form-btn {
+  background-color: #ff385c;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  padding: 15px;
+  width: 100%;
+  text-align: center;
+}
+
+
 /* -------  Media Query ------- */
+@media all and (min-width: 600px) {
+  main img {
+    /* padding: 100px; */
+    width: 100px;
+    /* padding: 10px; */
+  }
+
+  #about img {
+    width: 20%;
+    padding-right: 10px;
+    padding-left: 10px;
+    height: auto;
+    margin-bottom: 0px;
+  }
+
+
+  #about div {
+    /* padding: 20px; */
+    flex-direction: row;
+    display: flex;
+  }
+
+  #form-section {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+  }
+
+  #ideas div {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  /* div combines title and image */
+  #ideas div div {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+  }
+  #ideas img {
+    width: 100%;
+    height: auto;
+  }
+
+  #host {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  #host img {
+    width: 95%;
+    height: auto;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 70% 30%;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .logo {
+    text-align: left;
+  }
+}
